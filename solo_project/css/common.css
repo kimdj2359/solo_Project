@@ -1,0 +1,248 @@
+@charset "utf-8";
+/*초기화*/
+html, body, div, header, nav, section, aside, article, footer, figure, figcaption, fieldset, legend, ul,ol,li,dl,dt,dd,h1,h2,h3,p {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+fieldset {
+    border: 0;
+}
+/*폰트*/
+@font-face {
+    font-family: "Nanum";
+    font-weight: 400;
+    src: url("font/NanumGothic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "NanumBold";
+    font-weight: 600;
+    src: url("font/NanumGothicBold.ttf") format("trutype");
+}
+
+@font-face {
+    font-family: "NanumEx";
+    font-weight: 900;
+    src: url("font/NanumGothicExtraBold.ttf") format("truetype");
+ 
+}  
+@font-face {
+    font-family: "webcafeIcon";
+    font-weight: 400;
+    src: url("font/webcafeIcon.ttf") format(truetype),
+         url("font/webcafeIcon.svg#webcaferegular")format("svg");
+}
+/*링크 스타일*/
+a:link {
+        color: #4f4f4f;
+        text-decoration: none;
+    }
+    
+a:visited {
+        color: #8a8e91;
+}
+    
+a:hover, a:focus {
+        color: rgb(64, 0, 255);
+        text-decoration: none;
+}
+.hidden {
+    position: absolute;
+    left: -9999px;
+
+}
+    /*기본 스타일*/
+body {
+    color: #000;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 1.2;
+    font-family: "Nanum";
+}
+/*전체적인 레이아웃*/
+#visual, #contentsArea, #slogan {
+    width: 1024px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+/*헤더 영역 시작*/
+#header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 999; 
+    background-color: rgba(255, 255, 255, 0.7);
+}
+#header .logo {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    z-index: 9999;
+}
+#header .infoLink {
+    position: absolute;
+    top: 0;
+    right: 50px;
+}
+#header .infoLink>li {
+    display: inline-block;
+    padding: 8px 0 7px 3px;
+}
+#header .infoLink a::before {
+    content: "|";
+    padding-right: 8px;
+}
+
+#header .infoLink>li:first-child a::before{
+    content: "";
+}
+#header .mainMenu li, #header .mainMenu a {
+    display: inline-block;
+}
+#header .mainMenu {    
+    padding-left: 50px;
+    padding-top: 15px;
+}
+
+#header .mainMenu>li>a {
+    font-family: "NanumEx";
+    font-size: 1.16em;
+    padding: 15px 20px 14px;
+    color: #000;
+    font-size: bold;
+    letter-spacing: 1px;
+}
+#header .mainMenu>li:hover ul {
+    display: block;
+}
+#header .mainMenu ul {
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 10;
+    
+}
+#header .mainMenu ul a::before {
+    content: "r";
+    font-family: webcafeIcon;
+    color: #666;
+    position: relative;
+    top: 2px;
+}
+/*헤더 영역 끝*/
+/*비주얼 영역 시작*/
+#visual {
+    position: relative;
+    
+    display: inline-block;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev {
+    left: 10px;
+}
+.next {
+    right: 10px;
+}
+
+/*비주얼 영역 끝*/
+
+/*컨텐츠 영역 시작*/
+.usefulArea {
+    display: flex;
+    justify-content: space-between; /* 슬라이드 간의 간격을 벌림 */
+    position: relative;
+    width: 100%;
+    height: 300px; /* 슬라이드의 높이 조절 */
+    overflow: hidden; /* 넘치는 부분을 숨김 */
+}
+.usefulArea #recommendName {
+    text-align: center;
+}
+.recommendation {
+    /* 각 슬라이드의 스타일 지정 */
+    width: 49%; /* 슬라이드가 화면의 절반만 차지하도록 설정 */
+    height: 100%;
+    /* 슬라이드의 내용이 가운데로 오게 조정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.recommendation2 {
+    /* 각 슬라이드의 스타일 지정 */
+    width: 49%; /* 슬라이드가 화면의 절반만 차지하도록 설정 */
+    height: 100%;
+    /* 슬라이드의 내용이 가운데로 오게 조정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/*컨텐츠 영역 끝*/
+/*신규 이벤트 관련 사이트 인기사이트 영역 시작*/
+/*신규 이벤트 관련 사이트 인기사이트 영역 끝*/
+/*푸터 영역 시작*/
+#footer {
+    padding: 15px 0;
+    
+}
+#footerInner {
+    position: relative;
+}
+.footerLogo {
+    position: absolute;
+    float: left;
+    left: 0px;
+    top: 0px;
+}
+.guide, address, .copyright {
+    margin-left: 200px;
+    margin-right: 100px;
+    text-align: center;
+}
+.guide {
+    padding-left: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.guide li {
+    display: inline-block;
+}
+.guide a::before {
+    content: "||";
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.guide li:first-child a::before {
+    content: "";
+}
+address {
+    font-style: normal;
+    margin-bottom: 5px;
+}
+address>span {
+    margin-right: 10px;
+}
+/*푸터 영역 끝*/
