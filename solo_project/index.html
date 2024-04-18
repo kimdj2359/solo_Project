@@ -8,6 +8,31 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/index.css">
+    <script>
+        let slideIndex
+        window.onload = function () {
+            slideIndex = 1;
+            showSlides(slideIndex);           
+        }
+        function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+        
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+        
+            function showSlides(n) {
+                let i;
+                const slides = document.getElementsByClassName("slide");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slides[slideIndex - 1].style.display = "block";
+            }        
+    </script>
 </head>
 <body>
     <!--wrapper 영역 시작-->
@@ -74,35 +99,45 @@
         </header>
         <!--비주얼 영역 시작-->
         <div id="visual">
-            <div id="visual1">
+            <div class="slide">
+                <a href="#">
                 <img src="../solo_project/css/images/KakaoTalk_20240412_005704672_05.png" alt="주짓수 도복">
-                <p>니온벨리 에센셜 주짓수 도복</p>
-                <li><a href="#">자세히 보기</a></li>
+                </a>
+                <p><a href="#">니온벨리 에센셜 주짓수 도복</a></p>
             </div>
-            <div id="visual2">
+            <div class="slide">
+                <a href="#">
                 <img src="../solo_project/css/images/KakaoTalk_20240412_005704672_01.png" alt="주짓수 도복">
-                <p>브라질컴뱃 엑스트라 라이트</p>
-                <li><a href="#">자세히 보기</a></li>
+                </a>
+                <p><a href="#">브라질컴뱃 엑스트라 라이트</a></p>
             </div>
-            <div id="visual3">
+            <div class="slide">
+                <a href="#">
                 <img src="../solo_project/css/images/KakaoTalk_20240412_005704672_06.jpg" alt="주짓수 도복">
-                <p>스크램블 스탠다드 이슈</p>
-                <li><a href="#">자세히 보기</a></li>
+                </a>
+                <p><a href="#">스크램블 스탠다드 이슈</a></p>
+                
             </div>
-            <div id="visual4">
+            <div class="slide">
+                <a href="#">
                 <img src="../solo_project/css/images/KakaoTalk_20240412_005704672_07.png" alt="주짓수 도복">
-                <p>스크램블 애슬릿 퍼스트 에디션 주짓수 도복</p>
-                <li><a href="#">자세히 보기</a></li>
+                </a>
+                <p><a href="#">스크램블 애슬릿 퍼스트 에디션 주짓수 도복</a></p>
+                
             </div>
-            <div id="visual5">
+            <div class="slide">
+                <a href="#">
                 <img src="../solo_project/css/images/KakaoTalk_20240412_005704672_08.png" alt="주짓수 도복">
-                <p>스크램블 센고쿠 리마스터 주짓수 도복</p>
-                <li><a href="#">자세히 보기</a></li>
+                </a>
+                <p><a href="#">스크램블 센고쿠 리마스터 주짓수 도복</a></p>
+                
             </div>
-            <div id="visual6">
+            <div class="slide">
+                <a href="#">
                 <img src="../solo_project/css/images/KakaoTalk_20240412_005704672_03.png" alt="주짓수 도복">
-                <p>니온벨리 래쉬가드 숏 슬리브</p>
-                <li><a href="#">자세히 보기</a></li>
+                </a>
+                <p><a href="#">니온벨리 래쉬가드 숏 슬리브</a></p>
+                
             </div>
             <button class="prev" onclick="plusSlides(-1)">이전
             </button>
@@ -115,12 +150,13 @@
         <!--컨텐츠 영역 시작-->
             <!--추천 제품 시작-->
             <div class="usefulArea">
-                <section class="recommend">
-                    <h2 class="recommendName">Best Gi</h2>
-                    <ul>
-                        <li><a href="#">최근 출시</a>
+                <h2 class="recommendName">Best Gi</h2>
+                <section class="recommendNew">
+                    <h3>최근 출시</h3>
+                    <div>
+                        <li><a href="#"></a>
                             <ul class="newArrive">
-                                <div class="recommendation">
+                                <ul class="recommendation">
                                     <img src="../solo_project/css/images/로닌 블랙아웃 주짓수.PNG" alt="로닌 블랫아웃 주짓수">
                                     <li><a href="#">로닌 블랫아웃 주짓수</a></li>
                                     <li>출시일 <span>2024-04-02</span></li>
@@ -129,7 +165,7 @@
                                     <li>상의<span>450gsm 펄위브</span></li>
                                     <li>하의<span>10 oz 립스탑팬츠</span></li>
                                     <a href="#">자세히 보기</a>
-                                </div>
+                                </ul>
                                 <div class="recommendation">
                                     <img src="../solo_project/css/images/로닌 시그니처.PNG" alt="로닌 시그니처">
                                     <li><a href="#">로닌 시그니처</a></li>
@@ -181,7 +217,10 @@
                                     <a href="#">자세히 보기</a>
                                 </div>
                             </ul>    
-                                                          
+                        </li>
+                    </div>   
+                </section>
+                <section id="recommend">                                      
                         <li><a href="#">추천 도복</a>
                             <ul class="newArrive">
                                 <div class="recommendation2">
@@ -318,7 +357,7 @@
                 <address>
                     <span>수원시 팔달구 </span>
                     <span>·전화 : 010-1111-1111</span>
-                    <span>·E-MAIL : <a href="mailto:webmaster@webcafe.com">
+                    <span>·E-MAIL : <a href="mailto:webmaster@fitersMarket.com">
                         dongjun2359@naver.com
                     </a></span>
                 </address>

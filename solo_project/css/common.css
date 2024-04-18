@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*초기화*/
-html, body, div, header, nav, section, aside, article, footer, figure, figcaption, fieldset, legend, ul,ol,li,dl,dt,dd,h1,h2,h3,p {
+html,.usefulArea, body, div, header, nav, section, aside, article, footer, figure, figcaption, fieldset, legend, ul,ol,li,dl,dt,dd,h1,h2,h3,p {
     margin: 0;
     padding: 0;
 }
@@ -140,68 +140,16 @@ body {
 }
 /*헤더 영역 끝*/
 /*비주얼 영역 시작*/
-#visual {
-    position: relative;
-    
-    display: inline-block;
-}
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-}
-.prev {
-    left: 10px;
-}
-.next {
-    right: 10px;
-}
+
 
 /*비주얼 영역 끝*/
-
 /*컨텐츠 영역 시작*/
-.usefulArea {
-    display: flex;
-    justify-content: space-between; /* 슬라이드 간의 간격을 벌림 */
-    position: relative;
-    width: 100%;
-    height: 300px; /* 슬라이드의 높이 조절 */
-    overflow: hidden; /* 넘치는 부분을 숨김 */
-}
-.usefulArea #recommendName {
-    text-align: center;
-}
-.recommendation {
-    /* 각 슬라이드의 스타일 지정 */
-    width: 49%; /* 슬라이드가 화면의 절반만 차지하도록 설정 */
-    height: 100%;
-    /* 슬라이드의 내용이 가운데로 오게 조정 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.recommendation2 {
-    /* 각 슬라이드의 스타일 지정 */
-    width: 49%; /* 슬라이드가 화면의 절반만 차지하도록 설정 */
-    height: 100%;
-    /* 슬라이드의 내용이 가운데로 오게 조정 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
+
+
+
 /*컨텐츠 영역 끝*/
 /*신규 이벤트 관련 사이트 인기사이트 영역 시작*/
+
 /*신규 이벤트 관련 사이트 인기사이트 영역 끝*/
 /*푸터 영역 시작*/
 #footer {

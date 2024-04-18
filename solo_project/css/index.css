@@ -1,0 +1,116 @@
+@charset "utf-8";
+.slide {
+    display: none;
+    width: 100%;
+}
+
+.slide img {
+    position: relative;
+    border: 1px solid #ccc;
+    left: 26%;
+    width: 500px;
+    height: 500px;
+}
+.slide p {
+    position: relative;
+    list-style: none;
+    left: 45%;
+}
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    padding: 16px;
+    background-color: black;
+    opacity: 0.5;
+    color: white;
+    border: none;
+    z-index: 1000;
+    border-radius: 20px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    white-space: nowrap;/*줄바꿈 안하는거*/
+    overflow: hidden;
+    text-indent: 20px;
+    background-image: url(images/back_forward.png);
+    background-repeat: no-repeat;
+}
+.prev {
+    top: 35%;
+    left: 33.5%;
+    background-image: url(images/back_forward.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    
+}
+.next {
+    top: 35%;
+    right: 33%;
+    background-image: url(images/back_forward.png);
+    background-repeat: no-repeat;
+    background-position: 100% 0;   
+}
+/*usefulArea영역 시작*/
+.uesfulArea {
+    margin-top: 20px;
+    height: 170px;
+    position: relative;
+}
+.uesfulArea .recommendNew {
+    right: 30%;
+}
+.uesfulArea section {
+    position: relative;
+}
+
+.uesfulArea::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 27px;
+    width: 362px;
+    height: 1px;
+    background: linear-gradient(to right,#e3e3e3 0%,#fff 100%);
+}
+.uesfulArea h2 {
+    float: left;
+    font-size: 1em;
+
+}
+.uesfulArea h2 a {
+    display: inline-block;
+    padding: 6px 15px;
+    color: #7a7a7a;
+    font-family: "NanumEx";
+    border: 1px solid #c9c9c9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-image: linear-gradient(to bottom,#fcfcfc 0%,#eaeaea 100%);
+}
+.uesfulArea ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}.uesfulArea li {
+    margin-bottom: 10px;
+
+}
+.uesfulArea ul a {
+    display: inline-block;
+    width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.uesfulArea ul a::before{
+    font-family: "webcafeIcon";
+    content: "r";
+    color: #666;
+    position: relative;
+    top: 2px;
+}
+/*usefulArea영역 끝*/
